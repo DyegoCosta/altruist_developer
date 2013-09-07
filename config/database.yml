@@ -1,0 +1,22 @@
+development:                                                                                                                               
+  adapter: postgresql      
+  database: altruist_developer_development
+  pool: 5
+  timeout: 5000            
+
+test:                      
+  adapter: postgresql      
+  database: altruist_developer_test   
+  pool: 5                  
+  timeout: 5000            
+
+production:
+  adapter: postgresql
+  encoding: utf8
+  pool: 5
+  timeout: 5000
+  database: ENV['POSTGRESQL_DATABASE']
+  host: ENV['POSTGRESQL_HOST']
+  port: ENV['POSTGRESQL_PORT']
+  username: ENV['POSTGRESQL_USER']
+  password: ENV['POSTGRESQL_PASSWORD']
