@@ -1,28 +1,5 @@
-== README
+== Altruist developer
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Hi! We a software developers and we want to help animals, the environment and people. We're selling some of our time for any nonprofit organizations that need any asistence related to software development and/or maintenance for how much they can pay, including nothing. If you want to help you are welcome to join us.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+http://altruist-developer.heroku.com
