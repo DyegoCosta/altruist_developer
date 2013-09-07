@@ -2,4 +2,4 @@
 
 Hi! We a software developers and we want to help animals, the environment and people. We're selling some of our time for any nonprofit organizations that need any asistence related to software development and/or maintenance for how much they can pay, including nothing. If you want to help you are welcome to join us.
 
-http://altruist-developer.heroku.com
+http://altruistdeveloper.org
