@@ -13,7 +13,7 @@
     <h1>I'm a <span>software developer</span> willing to help</h1>
     <p class='lead'>
       I can contribute as a programmer, web designer, UX designer, tester or with
-      any other techy stuff that a nonprofit organization wouldn't be into. <a href="#">Sign up</a>
+      any other techy stuff that a nonprofit organization wouldn't be into. <%= link_to 'Sign up', new_developer_registration_path %> 
     </p>
   </div>
   <div class='col-md-6'>
@@ -21,7 +21,7 @@
     <p class='lead'>
       I'm involved with a nonprofit organization or I'm just a good human being
       helping others and I need help with techy
-      stuff that I'm not into. <a href="#">Sign up</a>  
+      stuff that I'm not into. <%= link_to 'Sign up', new_organization_registration_path %>
     </p>
   </div>
 </section>
