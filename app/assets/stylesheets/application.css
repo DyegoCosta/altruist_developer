@@ -24,3 +24,8 @@ header.main  h1 {
   text-align: center;
   text-transform: uppercase;
 }
+
+header.main h1 a, header.main h1 a:hover  {
+  text-decoration: none;
+  color: #000;
+}
