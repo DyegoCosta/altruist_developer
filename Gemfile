@@ -15,3 +15,4 @@ gem 'rails_12factor', group: :production
 
 gem 'pg'
 gem 'devise'
+gem 'simple_form', '~> 3.0.0.rc'
