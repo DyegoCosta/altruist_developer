@@ -16,3 +16,13 @@ gem 'rails_12factor', group: :production
 gem 'pg'
 gem 'devise'
 gem 'simple_form', '~> 3.0.0.rc'
+
+group :development, :test do
+  gem 'rspec-rails'
+end
+
+group :test do
+  gem 'guard-rspec'
+  gem 'shoulda-matchers'
+  gem 'rspec-mocks'
+end

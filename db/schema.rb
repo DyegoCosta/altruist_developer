@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130908222122) do
+ActiveRecord::Schema.define(version: 20130911024619) do
 
   create_table "developers", force: true do |t|
     t.string   "first_name"
@@ -51,5 +51,23 @@ ActiveRecord::Schema.define(version: 20130908222122) do
 
   add_index "organizations", ["email"], name: "index_organizations_on_email", unique: true, using: :btree
   add_index "organizations", ["reset_password_token"], name: "index_organizations_on_reset_password_token", unique: true, using: :btree
+
+  create_table "projects", force: true do |t|
+    t.string   "title"
+    t.string   "description"
+    t.string   "repository_url"
+    t.string   "status"
+    t.integer  "organization_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "projects", ["organization_id"], name: "index_projects_on_organization_id", using: :btree
+
+  create_table "projects_developers", force: true do |t|
+    t.integer "project_id"
+    t.integer "developer_id"
+    t.boolean "leader"
+  end
 
 end
