@@ -1,7 +1,6 @@
 class Project < ActiveRecord::Base
-  attr_accessor :title, :description
-  
   belongs_to :organization
+  has_many :developers, through: :teams
 
   validates_presence_of :title, :description
 end

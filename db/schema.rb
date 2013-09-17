@@ -53,10 +53,10 @@ ActiveRecord::Schema.define(version: 20130911024619) do
   add_index "organizations", ["reset_password_token"], name: "index_organizations_on_reset_password_token", unique: true, using: :btree
 
   create_table "projects", force: true do |t|
-    t.string   "title"
-    t.string   "description"
+    t.string   "title",                                 null: false
+    t.text     "description",                           null: false
     t.string   "repository_url"
-    t.string   "status"
+    t.string   "status",          default: "unstarted", null: false
     t.integer  "organization_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -64,10 +64,10 @@ ActiveRecord::Schema.define(version: 20130911024619) do
 
   add_index "projects", ["organization_id"], name: "index_projects_on_organization_id", using: :btree
 
-  create_table "projects_developers", force: true do |t|
-    t.integer "project_id"
-    t.integer "developer_id"
-    t.boolean "leader"
+  create_table "teams", force: true do |t|
+    t.integer "project_id",                   null: false
+    t.integer "developer_id",                 null: false
+    t.boolean "leader",       default: false
   end
 
 end
