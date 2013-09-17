@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Altruist developer</title>
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href='http://fonts.googleapis.com/css?family=Londrina+Sketch' rel='stylesheet' type='text/css'>
@@ -15,11 +15,11 @@
   <body>
     <header class="main">
       <h1><%= link_to 'Altruist developer', root_path %></h1>
+      <nav class="navbar">
+        <%= link_to 'Ask for a project', new_project_path, class: 'btn btn-primary navbar-btn btn-lg' %>
+      </nav>
     </header>
-    <div class="container">
-      <p class="notice"><%= notice %> </p>
-      <p class="alert"><%= alert %> </p>
-
+    <div class="container page">
       <%= yield %>
     </div>
 

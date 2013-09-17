@@ -13,7 +13,7 @@
  */
 
 header.main {
-  width: 80%;
+  width: 60%;
   margin: 40px auto;
 }
 
@@ -28,4 +28,16 @@ header.main  h1 {
 header.main h1 a, header.main h1 a:hover  {
   text-decoration: none;
   color: #000;
+}
+
+header.main nav {
+  float: right;
+  margin: 30px auto 20px;
+}
+
+div.page {
+  background-color: lightyellow;
+  padding: 20px;
+  border: 1px lightgray solid;
+  clear: both;
 }
