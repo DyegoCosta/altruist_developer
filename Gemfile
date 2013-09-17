@@ -16,6 +16,7 @@ gem 'rails_12factor', group: :production
 gem 'pg'
 gem 'devise'
 gem 'simple_form', '~> 3.0.0.rc'
+gem 'inherited_resources', github: 'josevalim/inherited_resources'
 
 group :development, :test do
   gem 'rspec-rails'
