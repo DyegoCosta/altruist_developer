@@ -12,7 +12,7 @@ class ProjectsController < InheritedResources::Base
     @project.organization = current_organization
     create!
   end
-  
+
   private
     def permitted_params
       params.require(:project).permit(:title, :description, :repository_url, :status)
@@ -24,7 +24,7 @@ class ProjectsController < InheritedResources::Base
 
     def authenticate_ownership!
       unless @project.organization == current_organization
-        redirect_to projects_path 
+        redirect_to projects_path
       end
     end
 end
