@@ -31,8 +31,13 @@ header.main h1 a, header.main h1 a:hover  {
 }
 
 header.main nav {
-  float: right;
+  float: left;
   margin: 30px auto 20px;
+}
+
+header.main aside {
+  float: right;
+  margin: 65px 0 10px;
 }
 
 div.page {
