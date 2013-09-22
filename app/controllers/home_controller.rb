@@ -1,5 +1,9 @@
 class HomeController < ApplicationController
   def index
-    render layout: 'landing_page'
+    if signed_in?
+      return redirect_to projects_path
+    else
+      render layout: 'landing_page'
+    end
   end
 end
