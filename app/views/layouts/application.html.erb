@@ -22,7 +22,13 @@
     <div class="container page">
       <%= yield %>
     </div>
-
+    <p>
+      <% if signed_in?%>
+        <%= signed_in_user_email %>
+      <% else %>
+        Guest
+      <% end %>
+    </p> 
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
   </body>
 </html>
