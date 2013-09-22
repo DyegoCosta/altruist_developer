@@ -16,7 +16,9 @@
     <header class="main">
       <h1><%= link_to 'Altruist developer', root_path %></h1>
       <nav class="navbar">
-        <%= link_to 'Ask for a project', new_project_path, class: 'btn btn-primary navbar-btn btn-lg' %>
+        <% if organization_signed_in? %>
+          <%= link_to 'Ask for a project', new_project_path, class: 'btn btn-primary navbar-btn btn-lg' %>
+        <% end %>
       </nav>
     </header>
     <div class="container page">
