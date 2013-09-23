@@ -28,4 +28,5 @@ group :test do
   gem 'shoulda-matchers'
   gem 'rspec-mocks'
   gem 'factory_girl_rails', '~> 4.0'
+  gem 'database_cleaner'
 end

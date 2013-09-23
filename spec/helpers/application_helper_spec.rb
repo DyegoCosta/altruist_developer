@@ -9,7 +9,7 @@ describe ApplicationHelper do
 
       helper.signed_in_user_email.should == organization.email
     end
-    
+
     it 'returns developer email' do
       @request.env['devise.mapping'] = Devise.mappings[:developer]
       developer = create :developer
