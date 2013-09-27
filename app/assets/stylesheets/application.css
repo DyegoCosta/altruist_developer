@@ -13,7 +13,7 @@
  */
 
 header.main {
-  width: 80%;
+  width: 60%;
   margin: 40px auto;
 }
 
@@ -23,4 +23,26 @@ header.main  h1 {
   font-family: 'Londrina Sketch', cursive;
   text-align: center;
   text-transform: uppercase;
+}
+
+header.main h1 a, header.main h1 a:hover  {
+  text-decoration: none;
+  color: #000;
+}
+
+header.main nav {
+  float: left;
+  margin: 30px auto 20px;
+}
+
+header.main aside {
+  float: right;
+  margin: 65px 0 10px;
+}
+
+div.page {
+  background-color: lightyellow;
+  padding: 20px;
+  border: 1px lightgray solid;
+  clear: both;
 }

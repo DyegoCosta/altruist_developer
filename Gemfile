@@ -14,3 +14,19 @@ gem 'jbuilder', '~> 1.2'
 gem 'rails_12factor', group: :production
 
 gem 'pg'
+gem 'devise'
+gem 'simple_form', '~> 3.0.0.rc'
+gem 'inherited_resources', github: 'josevalim/inherited_resources'
+gem 'omniauth-github'
+
+group :development, :test do
+  gem 'rspec-rails'
+end
+
+group :test do
+  gem 'guard-rspec'
+  gem 'shoulda-matchers'
+  gem 'rspec-mocks'
+  gem 'factory_girl_rails', '~> 4.0'
+  gem 'database_cleaner'
+end

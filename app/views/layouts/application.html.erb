@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Altruist developer</title>
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href='http://fonts.googleapis.com/css?family=Londrina+Sketch' rel='stylesheet' type='text/css'>
@@ -14,12 +14,23 @@
   </head>
   <body>
     <header class="main">
-      <h1>Altruist developer</h1>
+      <h1><%= link_to 'Altruist developer', root_path %></h1>
+      <nav class="navbar">
+        <% if organization_signed_in? %>
+          <%= link_to 'Ask for a project', new_project_path, class: 'btn btn-primary navbar-btn btn-lg' %>
+        <% end %>
+      </nav>
+      <aside>
+        <% if signed_in?%>
+          <%= signed_in_user_email %> <%= link_to 'Sign out', destroy_session_path, method: :delete %>
+        <% else %>
+          Guest
+        <% end %>
+      </aside> 
     </header>
-    <div class="container">
+    <div class="container page">
       <%= yield %>
     </div>
-
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 
     <script>
