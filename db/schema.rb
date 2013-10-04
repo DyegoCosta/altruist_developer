@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130921000220) do
+ActiveRecord::Schema.define(version: 20131003004957) do
 
   create_table "developers", force: true do |t|
     t.string   "email"
@@ -65,10 +65,10 @@ ActiveRecord::Schema.define(version: 20130921000220) do
 
   add_index "projects", ["organization_id"], name: "index_projects_on_organization_id", using: :btree
 
-  create_table "teams", force: true do |t|
+  create_table "team_members", force: true do |t|
     t.integer "project_id",                   null: false
     t.integer "developer_id",                 null: false
-    t.boolean "leader",       default: false
+    t.boolean "is_leader",    default: false
   end
 
 end
