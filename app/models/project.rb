@@ -6,7 +6,7 @@ class Project < ActiveRecord::Base
   validates_presence_of :title, :description
 
   def team_leader
-    leader = team_members.where(is_leader: true).first
+    leader = team_members.leader.first
     leader ? leader.developer : nil
   end
 end
