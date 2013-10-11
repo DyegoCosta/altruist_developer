@@ -5,12 +5,12 @@ describe Project do
   it { should validate_presence_of :description }
   it { should belong_to :organization }
 
-  describe '#team_leader' do
-    let(:project) { create :project }
+  let(:project) { create :project }
 
+  describe '#team_leader' do
     it 'obtain project team leader' do
       team_leader = create(:team_leader, project: project).developer
-      project.team_leader.should == team_leader
+      project.team_leader.should eql team_leader
     end
 
     it 'nil if there is no leader' do
@@ -19,7 +19,15 @@ describe Project do
   end
 
   describe '#set_leader' do
-    it 'set a developer as a project leader' do
+    it 'sets the project leader' do
+      developer = create :developer 
+      project.set_leader developer
+      project.team_leader.should eql developer
+    end
+
+    it 'do not set if project is leaded' do
+      create :team_leader, project: project
+      project.set_leader(create :developer).should be_false
     end
   end
 end

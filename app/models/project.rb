@@ -9,4 +9,8 @@ class Project < ActiveRecord::Base
     leader = team_members.leader.first
     leader ? leader.developer : nil
   end
+
+  def set_leader(developer)
+    TeamMember.create developer: developer, project: self, is_leader: true unless team_leader
+  end
 end
