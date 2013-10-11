@@ -1,7 +1,9 @@
 AltruistDeveloper::Application.routes.draw do
   root "home#index"
 
-  resources :projects
+  resources :projects do
+    post :team_members, to: 'team_members#create'
+  end
 
   devise_for :organizations
 

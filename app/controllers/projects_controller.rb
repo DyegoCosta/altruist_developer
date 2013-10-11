@@ -14,11 +14,6 @@ class ProjectsController < InheritedResources::Base
     create!
   end
 
-  def lead
-    project = Project.find params[:project_id]
-    project.lead current_developer
-  end
-
   private
     def permitted_params
       params.require(:project).permit(:title, :description)
