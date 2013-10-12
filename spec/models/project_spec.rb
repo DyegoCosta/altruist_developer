@@ -30,4 +30,12 @@ describe Project do
       project.set_leader(create :developer).should be_false
     end
   end
+
+  describe '#leaded_by?' do
+    let(:team_leader) { create(:team_leader, project: project).developer }
+
+    it { project.leaded_by?(team_leader).should be_true }
+    
+    it { project.leaded_by?(Developer.new).should be_false }
+  end
 end

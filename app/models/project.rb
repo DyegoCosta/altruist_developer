@@ -13,4 +13,8 @@ class Project < ActiveRecord::Base
   def set_leader(developer)
     TeamMember.create developer: developer, project: self, is_leader: true unless team_leader
   end
+
+  def leaded_by?(developer)
+    team_leader == developer
+  end
 end
