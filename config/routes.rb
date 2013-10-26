@@ -3,6 +3,7 @@ AltruistDeveloper::Application.routes.draw do
 
   resources :projects do
     post :team_members, to: 'team_members#create'
+    post :start_repository
   end
 
   devise_for :organizations

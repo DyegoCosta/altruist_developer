@@ -24,4 +24,24 @@ describe ProjectsController do
       end
     end
   end
+
+  context 'signed in as a developer' do
+    before do
+      @request.env['devise.mapping'] = Devise.mappings[:developer]
+      sign_in create :developer
+    end
+
+    describe 'create project repository' do
+      it 'returns repository url' do
+        repository_url = 'github.com/altruist_developer/test_repository'
+        ProjectSourceCode.stub(:start_repository).and_return repository_url
+        Project.stub(:find)
+
+        post :start_repository, repository_name: 'test_repository'
+
+        expect(response.status).to eql 201
+        expect(response.location).to eql repository_url
+      end
+    end
+  end
 end
