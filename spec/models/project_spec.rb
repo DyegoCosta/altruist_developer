@@ -3,6 +3,7 @@ require 'spec_helper'
 describe Project do
   it { should validate_presence_of :title }
   it { should validate_presence_of :description }
+  it { should validate_numericality_of(:team_max_size).only_integer.is_greater_than(0) }
   it { should belong_to :organization }
 
   let(:project) { create :project }

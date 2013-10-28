@@ -4,6 +4,7 @@ class Project < ActiveRecord::Base
   has_many :developers, through: :team_members
 
   validates_presence_of :title, :description
+  validates :team_max_size, numericality: { only_integer: true, greater_than: 0 }
 
   def join_team(developer)
     developers << developer and save! unless team_full? || !team_leader
