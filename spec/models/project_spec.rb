@@ -42,6 +42,7 @@ describe Project do
 
       it 'add a developer to the project team' do
         project.join_team developer
+        project.reload
         project.developers.should include developer
       end
 
