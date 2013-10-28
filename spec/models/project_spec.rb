@@ -31,11 +31,53 @@ describe Project do
     end
   end
 
+  describe '#join_team' do
+    let(:developer) { create :developer }
+
+    context 'project has a leader' do
+      before do
+        project.set_leader create :developer
+      end
+
+      it 'add a developer to the project team' do
+        project.join_team developer
+        project.developers.should include developer
+      end
+
+      it 'should not add the member as a leader' do
+        project.join_team developer
+        project.team_leader.should_not eql developer
+      end
+    end
+
+    describe 'do not add to the project team' do
+      it 'when team max size was reached' do
+        Project.any_instance.stub(:team_full? => true)
+        project.join_team developer
+        project.developers.should_not include developer
+      end
+    
+      it 'when team has no leader' do
+        project.team_leader.should be_nil
+        project.join_team developer
+        project.developers.should_not include developer
+      end
+    end
+  end
+
   describe '#leaded_by?' do
     let(:team_leader) { create(:team_leader, project: project).developer }
 
     it { project.leaded_by?(team_leader).should be_true }
     
     it { project.leaded_by?(Developer.new).should be_false }
+  end
+
+  describe '#team_full?' do
+    it 'true if team max size reached' do
+      project = create :project, team_max_size: 10
+      project.developers.stub(:size).and_return 10
+      project.team_full?.should be_true
+    end
   end
 end
