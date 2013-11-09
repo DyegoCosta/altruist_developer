@@ -1,31 +1,35 @@
-<section class='about'>
-  <p class='lead'>
-    Hi! We are software developers and we want to help animals, the environment and
-    people. We're selling some of our time for any <%= link_to 'nonprofit
-    organizations', 'http://en.wikipedia.org/wiki/Nonprofit_organization', { target: '_blank' } %> that
-    need any asistence related to software development and/or maintenance for how much
-    they can pay, including nothing. If you want to help you are welcome to <%=
-    link_to 'join', '#' %> us.
-  </p>
-</section>
-<section class='row sign-up-info'>
-  <div class='col-md-6'>  
-    <h1>I'm a <span>software developer</span> willing to help</h1>
-    <p class='lead'>
-      I can contribute as a programmer, web designer, UX designer, tester or with
-      any other techy stuff that a nonprofit organization wouldn't be into.
-      <br>
-      <%= link_to 'Sign in with GitHub', developer_omniauth_authorize_path(:github)%>
+<div class="row">
+  <div class="col-md-6">
+    <p class="text-right">
+      Hi! We are software developers and we want to help animals, the environment and
+      people. We're selling some of our time for any 
+      <%= link_to 'nonprofit organizations', 'http://en.wikipedia.org/wiki/Nonprofit_organization', { target: '_blank' } %> that
+      need any asistence related to software development and/or maintenance for how much
+      they can pay, including nothing. If you want to help you are welcome to <%= link_to 'join', '#' %> us.
     </p>
+  </div> 
+  <div class="col-md-6">
+    <div class="row">
+      <section class="access access-developer">
+        <h1>I'm a <strong>software developer</strong> willing to help</h1>
+        <p>
+          I can contribute as a programmer, web designer, UX designer, tester or with
+          any other techy stuff that a nonprofit organization wouldn't be into.
+        </p> 
+        <%= link_to 'Sign in with GitHub', developer_omniauth_authorize_path(:github)%>
+      </section>
+    </div>
+    <div class="row">
+      <section class="access access-org">
+        <h1>I'm a <strong>nonprofit organization</strong> needing help</h1>
+        <p>
+          I'm involved with a nonprofit organization or I'm just a good human being
+          helping others and I need help with techy
+          stuff that I'm not into.
+        </p> 
+        <%= link_to 'Sign up', new_organization_registration_path %>
+        <%= link_to 'Sign in', new_organization_session_path %>
+      </section>
+    </div>
   </div>
-  <div class='col-md-6'>
-    <h1>I'm a <span>nonprofit organization</span> needing help</h1>
-    <p class='lead'>
-      I'm involved with a nonprofit organization or I'm just a good human being
-      helping others and I need help with techy
-      stuff that I'm not into.
-      <br>
-      <%= link_to 'Sign up', new_organization_registration_path %> or <%= link_to 'Sign in', new_organization_session_path %>
-    </p>
-  </div>
-</section>
+</div>
