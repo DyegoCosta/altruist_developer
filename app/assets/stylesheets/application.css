@@ -12,37 +12,24 @@
  *= require_tree .
  */
 
-header.main {
-  width: 60%;
-  margin: 40px auto;
+header.navbar-main {
+  background-color: #F6F6F6;
+  border-bottom: 1px solid #EEE;
 }
 
-header.main  h1 {
-  line-height: 60px;
-  font-size: 90px;    
-  font-family: 'Londrina Sketch', cursive;
-  text-align: center;
+header.navbar-main .menu {
   text-transform: uppercase;
 }
 
-header.main h1 a, header.main h1 a:hover  {
-  text-decoration: none;
-  color: #000;
+footer.footer-main {
+  background-color: #F6F6F6;
+  height: 60px;
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+
 }
 
-header.main nav {
-  float: left;
-  margin: 30px auto 20px;
-}
-
-header.main aside {
-  float: right;
-  margin: 65px 0 10px;
-}
-
-div.page {
-  background-color: lightyellow;
-  padding: 20px;
-  border: 1px lightgray solid;
-  clear: both;
+footer.footer-main p {
+  margin: 20px 0;
 }

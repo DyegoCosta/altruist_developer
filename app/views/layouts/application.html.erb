@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Altruist developer</title>
-
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href='http://fonts.googleapis.com/css?family=Londrina+Sketch' rel='stylesheet' type='text/css'>
@@ -13,26 +13,30 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <header class="main">
-      <h1><%= link_to 'Altruist developer', root_path %></h1>
-      <nav class="navbar">
-        <% if organization_signed_in? %>
-          <%= link_to 'Ask for a project', new_project_path, class: 'btn btn-primary navbar-btn btn-lg' %>
-        <% end %>
-      </nav>
-      <aside>
-        <% if signed_in?%>
-          <%= signed_in_user_email %> <%= link_to 'Sign out', destroy_session_path, method: :delete %>
-        <% else %>
-          Guest
-        <% end %>
-      </aside> 
+    <header class="navbar navbar-main"> 
+      <div class="container">
+        <div class="navbar-header">
+          <%= link_to "Altruist developer", root_path, class: 'navbar-brand'%>
+        </div>
+        <nav class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right menu">
+            <li>
+              <%= link_to "About", about_path %>
+            </li> 
+          </ul>
+        </nav>
+      </div>
     </header>
-    <div class="container page">
+    <div class="container">
       <%= yield %>
     </div>
+    <footer class="footer-main">
+      <div class="containter">
+        <p class="text-muted text-center">Altruist developer <%= Date.today.year %></p>
+      </div>
+    </footer>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-
+    
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
