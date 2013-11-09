@@ -1,5 +1,7 @@
 AltruistDeveloper::Application.routes.draw do
-  root "home#index"
+  root 'home#index'
+
+  get 'about', to: 'home#about'
 
   resources :projects do
     post :team_members, to: 'team_members#create'
