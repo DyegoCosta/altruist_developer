@@ -1,29 +1,34 @@
-<table class='table'>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Repository url</th>
-      <th>Status</th>
-      <th>Contact</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<h1>Projects</h1>
 
-  <tbody>
+<section class="projects">
+  <header>
+    <h1>Projects</h1>
+    <div class="actions pull-right">
+      <a href="#">new</a>
+    </div>
+  </header>
+  <ul>
     <% @projects.each do |project| %>
-      <tr>
-        <td><%= project.title %></td>
-        <td><%= project.description %></td>
-        <td><%= project.repository_url %></td>
-        <td><%= project.status %></td>
-        <td><%= project.organization.email %>
-        <td><%= link_to 'Show', project %></td>
-        <td><%= link_to 'Edit', edit_project_path(project) %></td>
-        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <li>
+        <article>
+          <header>
+            <h1><%= project.title %></h1>
+            <h2><%= project.status %></h2>
+          </header>
+          <div class="project-details">
+            <div class="row">
+              <div class="col-md-6">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+              </div>
+              <div class="project-team col-md-6">
+                <p>
+                  Project owner: <span class="project-member-name"><%= project.organization.name %></span> <span class="project-member-email">(<%= mail_to project.organization.email %>)</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </li>
     <% end %>
-  </tbody>
-</table>
+  </ul>
+</section>
