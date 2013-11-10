@@ -1,1 +1,21 @@
+@import "default.css.scss";
 
+section.access {
+  h1 {
+    font-size: 2.1em;
+  }
+}
+
+section.access-dev {
+  margin-bottom: 40px;
+
+  h1 {
+    color: $default-green;
+  }
+}
+
+section.access-org {
+  h1 {
+    color: $default-blue;
+  }
+}
