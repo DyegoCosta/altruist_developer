@@ -33,3 +33,9 @@ footer.footer-main {
 footer.footer-main p {
   margin: 20px 0;
 }
+
+.container > h1 {
+  color: #9F7B41;
+  font-size: 2em;
+  margin-bottom: 40px;
+}
