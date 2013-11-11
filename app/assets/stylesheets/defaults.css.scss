@@ -1,8 +1,16 @@
 @import "configurations.css.scss";
 
+a, a:hover {
+  color: $default-green;
+}
+
 header.navbar-main {
   background-color: #F6F6F6;
   border-bottom: 1px solid #EEE;
+
+  a, a:hover {
+    color: #000;
+  }
 }
 
 header.navbar-main .menu {
