@@ -1,15 +1,20 @@
 <div class="row">
   <div class="col-md-6">
-    <%= image_tag "logo-vert.png", class: "pull-right" %>
-    <div class="clearfix"></div><br>
-    <p class="text-right">
-      Hi! We are software developers and we want to help animals, the environment and
-      people. We're selling some of our time for any 
-      <%= link_to 'nonprofit organizations', 'http://en.wikipedia.org/wiki/Nonprofit_organization', { target: '_blank' } %> that
-      need any asistence related to software development and/or maintenance for how much
-      they can pay, including nothing. If you want to help you are welcome to <%= link_to 'join', '#' %> us.
-    </p>
-  </div> 
+    <div class="row">
+      <div class="col-md-11 site-description">
+        <%= image_tag "logo-vert.png", class: "pull-right main-vert-logo" %>
+        <p class="pull-right text-right">
+          Hi! We are software developers and we want to help animals, the environment and
+          people. We're selling some of our time for any 
+          <%= link_to 'nonprofit organizations', 'http://en.wikipedia.org/wiki/Nonprofit_organization', { target: '_blank' } %> that
+          need any asistence related to software development and/or maintenance for how much
+          they can pay, including nothing. If you want to help you are welcome to <%= link_to 'join', '#' %> us.
+        </p>
+      </div>
+      <div class="col-md-1 access-division">
+      </div>
+    </div> 
+  </div>
   <div class="col-md-6">
     <div class="row">
       <section class="access access-dev">
@@ -18,7 +23,9 @@
           I can contribute as a programmer, web designer, UX designer, tester or with
           any other techy stuff that a nonprofit organization wouldn't be into.
         </p> 
-        <%= link_to 'Sign in with GitHub', developer_omniauth_authorize_path(:github)%>
+        <footer>
+          <%= link_to 'Sign in with GitHub', developer_omniauth_authorize_path(:github), class: 'btn btn-action'%>
+        </footer>
       </section>
     </div>
     <div class="row">
@@ -28,9 +35,11 @@
           I'm involved with a nonprofit organization or I'm just a good human being
           helping others and I need help with techy
           stuff that I'm not into.
-        </p> 
-        <%= link_to 'Sign up', new_organization_registration_path %>
-        <%= link_to 'Sign in', new_organization_session_path %>
+        </p>
+        <footer>
+          <%= link_to 'Sign up', new_organization_registration_path, class: 'btn btn-info' %>
+          <%= link_to 'Sign in', new_organization_session_path, class: 'btn btn-action' %>
+        </footer>
       </section>
     </div>
   </div>

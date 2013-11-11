@@ -1,4 +1,4 @@
-@import "default.css.scss";
+@import "configurations.css.scss";
 
 section.projects {
   border: 1px solid $border-gray;
@@ -23,12 +23,12 @@ section.projects {
 
     div.actions {
       a, a:hover, a:visited {
-        background-color: #82A85D;
         color: white;
         font-size: 1.2em;
         line-height: 30px;
         padding: 5px 35px;
         width: 110px;
+        display: inline;
       }
     }
   }

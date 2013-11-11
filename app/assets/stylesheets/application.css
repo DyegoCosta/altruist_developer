@@ -3,30 +3,6 @@
  *= require_tree .
  */
 
-header.navbar-main {
-  background-color: #F6F6F6;
-  border-bottom: 1px solid #EEE;
-}
-
-header.navbar-main .menu {
-  text-transform: uppercase;
-}
-
-footer.footer-main {
-  background-color: #F6F6F6;
-  height: 60px;
-  width: 100%;
-  bottom: 0;
-  position: absolute;
-
-}
-
-footer.footer-main p {
-  margin: 20px 0;
-}
-
-.container > h1 {
-  color: #9F7B41;
-  font-size: 2em;
-  margin-bottom: 40px;
+html, body {
+  height: 100%;
 }

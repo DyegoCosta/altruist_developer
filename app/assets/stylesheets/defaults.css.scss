@@ -1,0 +1,52 @@
+@import "configurations.css.scss";
+
+header.navbar-main {
+  background-color: #F6F6F6;
+  border-bottom: 1px solid #EEE;
+}
+
+header.navbar-main .menu {
+  text-transform: uppercase;
+}
+
+div.container {
+  min-height: 84%;
+}
+
+footer.footer-main {
+  background-color: #F6F6F6;
+  height: 65px;
+  margin-top: 20px;
+}
+
+footer.footer-main p {
+  padding-top: 20px;
+}
+
+.container > h1 {
+  color: #9F7B41;
+  font-size: 2em;
+  margin-bottom: 40px;
+}
+
+a.btn, button.btn, .btn:hover {
+  color: white;
+  font-size: 1.2em;
+  line-height: 30px;
+  border-radius: 0;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+}
+
+a.btn-action, button.btn-action {
+  background-color: $default-green;
+}
+
+a.btn-info, button.btn-info {
+  background-color: $default-blue;
+}
+
+a.btn-danger, button.btn-danger {
+  background-color: $default-red;
+}

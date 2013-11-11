@@ -1,8 +1,19 @@
-@import "default.css.scss";
+@import "configurations.css.scss";
 
 section.access {
+  padding: 10px;
+
   h1 {
     font-size: 2.1em;
+  }
+
+  a.btn {
+    margin: 25px 5px 0;
+    width: 200px;
+  }
+
+  footer {
+    text-align: center;
   }
 }
 
@@ -18,4 +29,13 @@ section.access-org {
   h1 {
     color: $default-blue;
   }
+}
+
+div.access-division {
+  height: 450px;
+  border-left: 1px solid #EAEAEA;
+}
+
+img.main-vert-logo {
+  margin-bottom: 30px;
 }
