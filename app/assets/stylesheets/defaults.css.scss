@@ -50,3 +50,17 @@ a.btn-info, button.btn-info {
 a.btn-danger, button.btn-danger {
   background-color: $default-red;
 }
+
+@media all and (max-width: 991px) {
+  div.access-division {
+    display: none;
+  }
+
+  img.main-vert-logo, div.site-description p {
+    float: none !important;
+  }
+
+  div.site-description, div.site-description p {
+    text-align: center;
+  }
+}
