@@ -51,15 +51,15 @@ a.btn, button.btn, input[type='submit'].btn, .btn:hover {
   border: none;
 }
 
-a.btn-action, button.btn-action {
+a.btn-action, button.btn-action, input[type='submit'].btn-action {
   background-color: $default-green;
 }
 
-a.btn-info, button.btn-info {
+a.btn-info, button.btn-info, input[type='submit'].btn-info {
   background-color: $default-blue;
 }
 
-a.btn-danger, button.btn-danger {
+a.btn-danger, button.btn-danger, input[type='submit'].btn-danger {
   background-color: $default-red;
 }
 
