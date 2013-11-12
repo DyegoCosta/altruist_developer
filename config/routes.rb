@@ -8,7 +8,7 @@ AltruistDeveloper::Application.routes.draw do
     post :start_repository
   end
 
-  devise_for :organizations
+  devise_for :organizations, controllers: { registrations: "organizations/registrations" }
 
   devise_for :developers, controllers: { omniauth_callbacks: 'developers/omniauth_callbacks' }
   devise_scope :developer do
