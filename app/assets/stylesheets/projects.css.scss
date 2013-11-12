@@ -41,7 +41,8 @@ section.projects {
       padding: 0 10px 0 40px;
 
       &:not(:last-child) {
-        border-botton: 1px solid $border-gray;
+        padding-bottom: 15px;
+        border-bottom: 1px solid $border-gray;
       }
 
       header {
