@@ -1,20 +1,22 @@
 <h1>Projects</h1>
 
-<section class="projects">
-  <header>
-    <h1>Projects</h1>
-    <div class="actions pull-right">
-      <a href="#" class="btn btn-action">new</a>
-    </div>
-  </header>
-  <ul>
-    <% @projects.each do |project| %>
-      <li>
-        <article>
+<section class="all-projects">
+  <article class="projects">
+    <header>
+      <h1>Projects</h1>
+      <div class="actions pull-right">
+        <a href="#" class="btn btn-action">new</a>
+      </div>
+    </header>
+    <dl> 
+      <% @projects.each_with_index do |project, index| %>
+        <dt>
           <header>
             <h1><%= project.title %></h1>
             <h2><%= project.status %></h2>
           </header>
+        </dt>
+        <dd>
           <div class="project-details">
             <div class="row">
               <div class="col-md-6">
@@ -27,8 +29,9 @@
               </div>
             </div>
           </div>
-        </article>
-      </li>
-    <% end %>
-  </ul>
+        </dd>
+        <% if index != (@projects.length - 1) %> <hr> <% end %>
+      <% end %>
+    </dl>
+  </article>
 </section>

@@ -1,6 +1,6 @@
 @import "configurations.css.scss";
 
-section.projects {
+article.projects {
   border: 1px solid $border-gray;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
@@ -33,17 +33,10 @@ section.projects {
     }
   }
 
-  > ul {
-    list-style: none;
-    padding: 0;
+  > dl {
 
-    li {
-      padding: 0 10px 0 40px;
-
-      &:not(:last-child) {
-        padding-bottom: 15px;
-        border-bottom: 1px solid $border-gray;
-      }
+    dt {
+      margin: 0 10px 0 60px;
 
       header {
         h1 {
@@ -56,23 +49,28 @@ section.projects {
           margin: 0 0 10px 0;
         }
       }
+    }
 
-      div.project-details {
-        background-color: #F6F6F6;
-        padding: 15px;
+    dd {
+      background-color: #F6F6F6;
+      padding: 15px;
+      margin: 0 15px 0 60px;
 
-        div.project-team {
-          p {
-            font-size: 1.4em;
-          }
+      &:not(:last-child) {
+        padding-bottom: 15px;
+      }
 
-          span.project-member-name {
-            color: $default-green;
-          }
+      div.project-team {
+        p {
+          font-size: 1.4em;
+        }
 
-          span.project-member-email, span.project-member-email a {
-            color: $default-red;
-          }
+        span.project-member-name {
+          color: $default-green;
+        }
+
+        span.project-member-email, span.project-member-email a {
+          color: $default-red;
         }
       }
     }
