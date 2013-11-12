@@ -37,7 +37,11 @@ footer.footer-main p {
   margin-bottom: 40px;
 }
 
-a.btn, button.btn, .btn:hover {
+ul.dropdown-menu {
+  text-transform: none;
+}
+
+a.btn, button.btn, input[type='submit'].btn, .btn:hover {
   color: white;
   font-size: 1.2em;
   line-height: 30px;
