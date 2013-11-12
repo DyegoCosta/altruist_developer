@@ -9,6 +9,6 @@ AltruistDeveloper::Application.configure do
   config.active_record.migration_error = :page_load
   config.assets.debug = true
 
-  ENV['GITHUB_APP_ID'] = '9e2e5e1f71177bc83522'
-  ENV['GITHUB_APP_SECRET'] = '72020566227e06cfe34f5faecfd57ffedd8461e8'
+  ENV['GITHUB_APP_ID'] = 'bf0551f2235a6aa78764'
+  ENV['GITHUB_APP_SECRET'] = '8160e6c4d469f0ebd7fbd9d82dd25c3886de65c1'
 end
