@@ -1,0 +1,17 @@
+section.about {
+  padding-top: 50px;
+}
+
+div.about-division {
+  height: 600px;
+}
+
+@media all and (max-width: 991px) {
+  div.site-big-logos {
+    display: none;
+  }
+
+  section.about {
+    padding: 0px;
+  }
+}

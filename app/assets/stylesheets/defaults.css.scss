@@ -4,12 +4,21 @@ a, a:hover {
   color: $default-green;
 }
 
+iframe {
+  max-width: 100%;
+}
+
 header.navbar-main {
   background-color: #F6F6F6;
   border-bottom: 1px solid #EEE;
+  margin-bottom: 50px;
 
   a, a:hover {
     color: #000;
+  }
+
+  a.navbar-brand {
+    padding: 0px;
   }
 }
 
@@ -19,6 +28,10 @@ header.navbar-main .menu {
 
 div.container {
   min-height: 84%;
+}
+
+div.col-division {
+  border-left: 1px solid #EAEAEA;
 }
 
 footer.footer-main {
@@ -64,7 +77,7 @@ a.btn-danger, button.btn-danger, input[type='submit'].btn-danger {
 }
 
 @media all and (max-width: 991px) {
-  div.access-division {
+  div.col-division {
     display: none;
   }
 
