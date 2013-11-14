@@ -22,13 +22,19 @@ article.projects {
     }
 
     div.actions {
-      a, a:hover, a:visited {
+      a.btn, a.btn:hover, a.btn:visited {
         color: white;
         font-size: 1.2em;
         line-height: 30px;
-        padding: 5px 35px;
+        padding: 5px 15px;
         width: 110px;
         display: inline;
+
+        i.fa {
+          font-size: 1.2em;
+          margin-right: 10px;
+
+        }
       }
     }
   }
