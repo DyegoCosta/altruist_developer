@@ -5,7 +5,9 @@
     <header>
       <h1>Projects</h1>
       <div class="actions pull-right">
-        <a href="#" class="btn btn-action">new</a>
+        <% if organization_signed_in? %>
+          <%= link_to 'new', new_project_path, class: 'btn btn-action' %>
+        <% end %>
       </div>
     </header>
     <dl> 
