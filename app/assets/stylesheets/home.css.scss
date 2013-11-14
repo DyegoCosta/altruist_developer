@@ -1,9 +1,9 @@
 @import "configurations.css.scss";
 
-section.access {
+article.access, article.site-summary {
   padding: 10px;
 
-  h1 {
+  header > h1 {
     font-size: 2.1em;
   }
 
@@ -17,31 +17,25 @@ section.access {
   }
 }
 
-section.access-dev {
+article.access-dev {
   margin-bottom: 40px;
 
-  h1 {
+  header > h1 {
     color: $default-green;
   }
 
   footer a.btn {
     width: 260px;
 
-    i.fa {
-      font-size: 2em;
-      margin-right: 20px;
-    }
-
     span {
       vertical-align: middle;
-      margin-bottom: 5px;
       display: inline-block;
     }
   }
 }
 
-section.access-org {
-  h1 {
+article.access-org {
+  header > h1 {
     color: $default-blue;
   }
 }
@@ -52,4 +46,10 @@ div.access-division {
 
 img.main-vert-logo {
   margin-bottom: 30px;
+}
+
+article.site-summary > footer {
+  a.btn {
+    margin-top: 60px;
+  }
 }
