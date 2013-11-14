@@ -43,6 +43,11 @@ div.container {
 
 div.col-division {
   border-left: 1px solid #EAEAEA;
+  -moz-box-shadow: inset 20px 10px 15px -20px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: inset 20px 10px 15px -20px rgba(0, 0, 0, 0.06);
+  box-shadow: inset 20px 10px 15px -20px rgba(0, 0, 0, 0.06);
+  //box-shadow: inset 5px 0 15px -20px #CCC, 0 0px 0px -5px #CCC, -5px 0 15px -10px #CCC;
+  //box-shadow: inset 10px 0px 35px -20px rgba(0, 0, 0, 0.06);
 }
 
 footer.footer-main {
