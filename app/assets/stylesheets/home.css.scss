@@ -23,6 +23,21 @@ section.access-dev {
   h1 {
     color: $default-green;
   }
+
+  footer a.btn {
+    width: 260px;
+
+    i.fa {
+      font-size: 2em;
+      margin-right: 20px;
+    }
+
+    span {
+      vertical-align: middle;
+      margin-bottom: 5px;
+      display: inline-block;
+    }
+  }
 }
 
 section.access-org {
