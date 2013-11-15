@@ -13,7 +13,7 @@
       </div>
     </header>
     <dl> 
-      <% @projects.each_with_index do |project, index| %>
+      <% @projects.each do |project| %>
         <dt>
           <header>
             <h1><%= project.title %></h1>
@@ -34,7 +34,6 @@
             </div>
           </div>
         </dd>
-        <% if index != (@projects.length - 1) %> <hr> <% end %>
       <% end %>
     </dl>
   </article>
