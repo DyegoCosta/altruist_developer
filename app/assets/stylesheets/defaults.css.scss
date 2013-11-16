@@ -85,6 +85,10 @@ a.btn, button.btn, input[type='submit'].btn, .btn:hover, .btn:active {
 
 a.btn-action, button.btn-action, input[type='submit'].btn-action {
   background-color: $default-green;
+
+  &:hover, &:active {
+    background-color: #769954;
+  }
 }
 
 a.btn-info, button.btn-info, input[type='submit'].btn-info {
@@ -95,8 +99,12 @@ a.btn-danger, button.btn-danger, input[type='submit'].btn-danger {
   background-color: $default-red;
 }
 
-a.btn-neutro, button.btn-neutro, input[type='submit'].btn-neutro,
-a.btn-neutro:hover, button.btn-neutro:hover, input[type='submit'].btn-neutro:hover {
+a.btn-neutro, button.btn-neutro, input[type='submit'].btn-neutro {
+  &:hover, &:active {
+    border: 1px solid #C0C0C0;
+    color: #000;
+  }
+
   color: #000;
   border: 1px solid $border-gray;
   background-color: white;
