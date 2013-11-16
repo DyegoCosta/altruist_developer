@@ -42,12 +42,14 @@ div.container {
 }
 
 div.col-division {
-  border-left: 1px solid #EAEAEA;
-  -moz-box-shadow: inset 20px 10px 15px -20px rgba(0, 0, 0, 0.06);
-  -webkit-box-shadow: inset 20px 10px 15px -20px rgba(0, 0, 0, 0.06);
-  box-shadow: inset 20px 10px 15px -20px rgba(0, 0, 0, 0.06);
-  //box-shadow: inset 5px 0 15px -20px #CCC, 0 0px 0px -5px #CCC, -5px 0 15px -10px #CCC;
-  //box-shadow: inset 10px 0px 35px -20px rgba(0, 0, 0, 0.06);
+  border-right: 1px solid #EAEAEA;
+  -moz-box-shadow: 20px 10px 15px -20px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 20px 10px 15px -20px rgba(0, 0, 0, 0.06);
+  box-shadow: 20px 10px 15px -20px rgba(0, 0, 0, 0.06);
+}
+
+div.col-divided > .row {
+  margin-left: 0;
 }
 
 footer.footer-main {
@@ -64,7 +66,7 @@ ul.dropdown-menu {
   text-transform: none;
 }
 
-a.btn, button.btn, input[type='submit'].btn, .btn:hover {
+a.btn, button.btn, input[type='submit'].btn, .btn:hover, .btn:active {
   color: white;
   font-size: 1.2em;
   line-height: 30px;
@@ -91,6 +93,15 @@ a.btn-info, button.btn-info, input[type='submit'].btn-info {
 
 a.btn-danger, button.btn-danger, input[type='submit'].btn-danger {
   background-color: $default-red;
+}
+
+input.error, textarea.error, select.error {
+  border-color: #B94A48;
+}
+
+label.error {
+  color: #B94A48;
+  font-size: .8em;
 }
 
 @media all and (max-width: 991px) {
