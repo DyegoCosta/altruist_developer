@@ -4,8 +4,14 @@ class ProjectsController < InheritedResources::Base
   before_action :authenticate_developer!, only: [:start_repository]
   before_action :authenticate_ownership!, only: [:edit, :update, :destroy]
 
+  def index
+    @projects = Project.includes(:organization)
+  end
+
   def new
     @project = Project.new
+
+    render layout: false
   end
 
   def create
