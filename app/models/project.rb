@@ -26,4 +26,8 @@ class Project < ActiveRecord::Base
   def team_full?
     developers.size == team_max_size
   end
+
+  def owned_by?(org)
+    organization == org
+  end
 end

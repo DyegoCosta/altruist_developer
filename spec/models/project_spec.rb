@@ -82,4 +82,13 @@ describe Project do
       project.team_full?.should be_true
     end
   end
+
+  describe '#owned_by?' do
+    let(:organization) { build_stubbed(:organization) }
+    let(:project) { build_stubbed(:project, organization: organization) }
+
+    it { project.owned_by?(organization).should be_true }
+
+    it { project.owned_by?(Organization.new).should be_false }
+  end
 end
