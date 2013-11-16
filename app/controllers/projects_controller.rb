@@ -40,9 +40,8 @@ class ProjectsController < InheritedResources::Base
     end
 
     def authenticate_ownership!
-      unless @project.organization == current_organization
-        flash[:error] = 'You can not alter this project'
-        redirect_to projects_path
+      unless @project.owned_by? current_organization
+        redirect_to projects_path, alert: 'You can not alter this project'
       end
     end
 end
