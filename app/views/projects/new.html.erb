@@ -1,5 +1,6 @@
-<h1>New project</h1>
+<%= simple_form_for(@project, :defaults => { :input_html => { :class => "form-control" } }) do |f| %>
+  <%= f.error_notification %>
 
-<%= render 'form' %>
-
-<%= link_to 'Back', projects_path %>
+  <%= f.input :title, placeholder: 'e.g. Organization web site' %>
+  <%= f.input :description, placeholder: 'Describe here as most detailed as possible what you need' %>
+<% end %>

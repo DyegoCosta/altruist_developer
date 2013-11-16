@@ -43,13 +43,22 @@ article.projects {
 
     dt {
       margin: 20px 0 0;
-      padding-left: 60px;
 
       &:not(:first-child) {
         border-top: 1px solid $border-gray;
       }
 
       header {
+        padding-left: 60px;
+
+        .fa-code {
+          color: $default-blue;
+          position: absolute;
+          margin-left: -40px;
+          margin-top: 15px;
+          font-size: 1.5em;
+        }
+
         h1 {
           font-size: 1.5em;
           margin: 15px 0 10px 0;

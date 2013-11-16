@@ -4,6 +4,8 @@ class ProjectsController < InheritedResources::Base
   before_action :authenticate_developer!, only: [:start_repository]
   before_action :authenticate_ownership!, only: [:edit, :update, :destroy]
 
+  actions :all, except: [:show, :destroy]
+
   def index
     @projects = Project.includes(:organization)
   end
@@ -17,7 +19,7 @@ class ProjectsController < InheritedResources::Base
   def create
     @project = Project.new(permitted_params)
     @project.organization = current_organization
-    create!
+    create!(notice: 'Project successfully created') { projects_path }
   end
 
   def start_repository
