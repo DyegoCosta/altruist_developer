@@ -5,6 +5,10 @@ article.projects {
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
 
+  .btn.btn-cancel-project i, .btn.btn-cancel-project i:hover {
+    font-size: 2em;
+  }
+
   > header {
     background-color: #9DCCDC;
     border-bottom: 1px solid $border-gray;

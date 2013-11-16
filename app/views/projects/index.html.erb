@@ -26,12 +26,24 @@
           <div class="project-details">
             <div class="row">
               <div class="col-md-6">
-                <%= project.description %>
+                  <p>
+                    <strong>Project description: </strong> <%= project.description %>
+                  </p>
               </div>
               <div class="project-team col-md-6">
-                <p>
-                  Project owner: <span class="project-member-name"><%= project.organization.name %></span> <span class="project-member-email">(<%= mail_to project.organization.email %>)</span>
-                </p>
+                <article class="project-description">
+                  <p>
+                    Project owner: <span class="project-member-name"><%= project.organization.name %></span> <span class="project-member-email">(<%= mail_to project.organization.email %>)</span>
+                  </p>
+                  <footer>
+                    <% if organization_signed_in? && project.owned_by?(current_organization) %>
+                      <a href="#" name="cancel-project" class="btn btn-danger btn-cancel-project" data-project="<%= project.id %>">
+                        <i class="fa fa-times"></i>
+                        cancel project
+                      </a>
+                    <% end %>
+                  </footer>
+                </article>
               </div>
             </div>
           </div>
@@ -40,19 +52,36 @@
     </dl>
   </article>
 </section>
-<div class="modal fade" id="projectFormModal" tabindex="-1" role="dialog" aria-labelledby="{{title}}" aria-hidden="true">
+<div class="modal fade" id="cancelProjectModal" tabindex="-1" role="dialog" aria-labelledby="{{title}}" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title"></h4>
+        <h4 class="modal-title">Cancel project</h4>
       </div>
       <div class="modal-body">
+        The project will be completely removed from our system and all data will be lost. Are you sure you wanna cancel this project?
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-        <button type="button" class="btn btn-action save-project">Save project</button>
+        <button type="button" class="btn btn-neutro" data-dismiss="modal">Maybe later</button>
+        <a href="#" data-method="delete" class="btn btn-danger btn-cancel-project">Cancel project</a>
       </div>
     </div>
   </div>
+</div>
+<div class="modal fade" id="projectFormModal" tabindex="-1" role="dialog" aria-labelledby="{{title}}" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      <h4 class="modal-title"></h4>
+    </div>
+    <div class="modal-body">
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+      <button type="button" class="btn btn-action save-project">Save project</button>
+    </div>
+  </div>
+</div>
 </div>

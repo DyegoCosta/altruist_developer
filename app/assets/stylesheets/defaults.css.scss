@@ -95,6 +95,13 @@ a.btn-danger, button.btn-danger, input[type='submit'].btn-danger {
   background-color: $default-red;
 }
 
+a.btn-neutro, button.btn-neutro, input[type='submit'].btn-neutro,
+a.btn-neutro:hover, button.btn-neutro:hover, input[type='submit'].btn-neutro:hover {
+  color: #000;
+  border: 1px solid $border-gray;
+  background-color: white;
+}
+
 input.error, textarea.error, select.error {
   border-color: #B94A48;
 }

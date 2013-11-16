@@ -1,6 +1,7 @@
 $ ->
   $("#new-project").click openCreateProjectModal
   $("#projectFormModal .save-project").click submitModalForm
+  $("a[name='cancel-project']").on("click", openCancelationConfirmation)
 
 openCreateProjectModal = ->
   $.get "/projects/new", (data) ->
@@ -19,3 +20,10 @@ renderModal = (args) ->
 
 submitModalForm = (e) ->
   $(e.target).parents(".modal-content").find("form").submit()
+
+openCancelationConfirmation = (e) ->
+  projectId = $(e.target).data("project")
+  modal = $("#cancelProjectModal")
+  $(".btn-cancel-project", modal).attr("href", "/projects/#{projectId}")
+  modal.modal()
+
