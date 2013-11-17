@@ -44,9 +44,10 @@ article.projects {
   }
 
   > dl {
+    margin: 0;
 
     dt {
-      margin: 20px 0 0;
+      cursor: pointer;
 
       &:not(:first-child) {
         border-top: 1px solid $border-gray;
@@ -78,7 +79,8 @@ article.projects {
     dd {
       background-color: #F6F6F6;
       padding: 15px;
-      margin: 0 15px 0 60px;
+      margin: 0 15px 15px 60px;
+      display: none;
 
       &:not(:last-child) {
         padding-bottom: 15px;

@@ -2,6 +2,7 @@ $ ->
   $("#new-project").click openCreateProjectModal
   $("#projectFormModal .save-project").click submitModalForm
   $("a[name='cancel-project']").on("click", openCancelationConfirmation)
+  $("article.projects dt").on("click", toggleProjectDetails)
 
 openCreateProjectModal = ->
   $.get "/projects/new", (data) ->
@@ -27,3 +28,5 @@ openCancelationConfirmation = (e) ->
   $(".btn-cancel-project", modal).attr("href", "/projects/#{projectId}")
   modal.modal()
 
+toggleProjectDetails = (e) ->
+  $(e.currentTarget).next("dd").slideToggle()
