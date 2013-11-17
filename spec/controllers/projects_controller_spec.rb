@@ -18,9 +18,8 @@ describe ProjectsController do
           send(method, action, id: create(:project, organization: Organization.new))
 
           expect(response).to redirect_to projects_path
-          expect(flash[:error]).to eql 'You can not alter this project'
+          expect(flash[:alert]).to eql 'You can not alter this project'
         end
-
       end
     end
   end
