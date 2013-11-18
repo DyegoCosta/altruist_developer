@@ -12,13 +12,12 @@ module Features
     end
 
     def organization_sign_in(organization = nil)
-      organization ||= create(:organization)
+      organization ||= create :organization
 
       visit new_organization_session_path
 
       fill_in 'Email', with: organization.email
       fill_in 'Password', with: organization.password
-
       click_button 'Sign in'
     end
   end

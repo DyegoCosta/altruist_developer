@@ -2,7 +2,7 @@ FactoryGirl.define do
   sequence :email do |n|
     "contact_#{n}@altruistdeveloper.org"
   end
-  
+
   factory :organization do
     email
     name 'Organization X'
