@@ -1,5 +1,7 @@
 == Altruist developer
 
-Hi! We are software developers and we want to help animals, the environment and people. We're selling some of our time for any nonprofit organizations that need any asistence related to software development and/or maintenance for how much they can pay, including nothing. If you want to help you are welcome to join us.
+Hi! We are software developers and we want to help animals, the environment and people. We're selling some of our time for any nonprofit organizations that need any asistence related to software development and/or maintenance for how much they can pay, including nothing. If you want to help you are welcome to join us.  
+
+The inspiration to make this site came from the [TED Talk](http://www.ted.com/talks/amanda_palmer_the_art_of_asking.html?embed=true) given by [Amanda Palmer](http://amandapalmer.net/)  
 
 http://altruistdeveloper.org
