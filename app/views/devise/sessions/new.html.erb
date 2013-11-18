@@ -1,5 +1,7 @@
 <h1>Sign in</h1>
 
+<%= alert(flash[:alert]) %>
+
 <div class='access-form'>
   <%= simple_form_for(resource, defaults: { input_html: { class: 'form-control' } }, :as => resource_name, :url => session_path(resource_name)) do |f| %>
     <div class="form-inputs">
